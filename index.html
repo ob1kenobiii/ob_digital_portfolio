@@ -13,14 +13,18 @@
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <span class="text-xl font-bold text-indigo-600 tracking-wider">OPHELIA BIANCA PRILLES</span>
-            <div class="space-x-6 text-sm font-medium text-gray-600">
+            <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" class="md:hidden inline-flex items-center justify-center rounded-md border border-gray-200 p-2 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <span class="sr-only">Open navigation menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="nav-menu" class="hidden w-full mt-4 flex-col gap-3 text-sm font-medium text-gray-600 md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:gap-0 md:space-x-6">
                 <a href="#about" class="hover:text-indigo-600 transition">About</a>
                 <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
                 <a href="#confidentiality" class="hover:text-indigo-600 transition">Ethics</a>
                 <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-                <a href="Prilles_Resume.pdf" target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"><i class="fa-solid fa-file-pdf mr-2"></i>Resume</a>
+                <a href="Prilles_Resume.pdf" target="_blank" class="inline-flex items-center justify-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition text-center md:text-left"><i class="fa-solid fa-file-pdf mr-2"></i>Resume</a>
             </div>
         </div>
     </nav>
@@ -162,6 +166,17 @@
             <p class="text-xs text-gray-400">&copy; 2026. Built explicitly for ENGE101: Professional Communication With Emerging Media.</p>
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle?.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
