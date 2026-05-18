@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCMIS Case Study - Red Corner Management Information System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#projects" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium inline-flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back to Portfolio
+            </a>
+            <span class="text-xs bg-blue-50 text-blue-700 font-semibold px-2.5 py-1 rounded-md border border-blue-100">
+                <i class="fa-solid fa-file-code mr-1"></i> System Architecture Model
+            </span>
+        </div>
+    </nav>
+
+    <header class="bg-white py-12 border-b border-gray-100">
+        <div class="max-w-3xl mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">RCMIS: Red Corner Management Information System</h1>
+            <p class="text-gray-500 text-base mb-6">Engineering a multi-tiered hospitality platform mapping Office Automation (OAS), Management Information (MIS), and Executive Support (ESS) architectures.</p>
+            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Systems Analysis & Design</span>
+                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Cross-Subsystem Database</span>
+                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Operational Dashboard</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="max-w-3xl mx-auto px-4 py-12 space-y-10">
+        
+        <section>
+            <h2 class="text-xl font-bold text-gray-900 mb-3"><i class="fa-solid fa-triangle-exclamation text-red-500 mr-2"></i>The Operational Bottleneck</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Red-Corner Hotel and Residences operates an 18-room hotel along with 4 commercial leasing spaces[cite: 9]. Management faced massive friction due to operational fragmentation across its mixed-use business model[cite: 9, 10]:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-sm text-gray-600">
+                <li><strong>Information Asymmetry & Double Bookings:</strong> Daily reservations from walk-ins and disparate third-party online platforms (Agoda, Airbnb, Facebook) were maintained on unsynchronized logs, leading to frequent double bookings and customer hostility[cite: 13, 16, 24].</li>
+                <li><strong>Utility Billing Overhead:</strong> Monthly commercial and residential submeter tracking was recorded entirely in physical notebooks, requiring tedious manual calculations via basic spreadsheet templates across inconsistent tenant start dates[cite: 21, 57, 58].</li>
+                <li><strong>Logistics and Staffing Friction:</strong> Room inventory, item restocking requests, and employee bi-weekly scheduling configurations were handled through offline communication channels, creating administrative blind spots[cite: 54, 56, 61].</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold text-gray-900 mb-3"><i class="fa-solid fa-diagram-project text-blue-500 mr-2"></i>Proposed Subsystem Integration</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                The RCMIS engineering model resolves these inefficiencies by linking walk-in and digital online booking protocols directly to a unified database cluster[cite: 139]. The system design introduces four primary data pipelines[cite: 76]:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-1 flex items-center"><i class="fa-solid fa-hotel text-blue-500 mr-1.5"></i> Dual-Database Booking Subsystem</h4>
+                    Isolates real-time reservation schedules from active room statuses to prevent transactional lockups, immediately reflecting check-in/out updates across channels[cite: 78, 94].
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-1 flex items-center"><i class="fa-solid fa-calculator text-emerald-500 mr-1.5"></i> Semi-Automated Tenant Billing</h4>
+                    Consolidates water and electricity submeter data inputs to instantly compute weighted consumption totals, taxes, penalties, and lease dues[cite: 8, 70, 99].
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-1 flex items-center"><i class="fa-solid fa-boxes-stacked text-amber-500 mr-1.5"></i> Real-Time Inventory Control</h4>
+                    Monitors guest amenity usage and cleaning supplies, flagging automated reorder alerts when inventory drops below designated audit thresholds[cite: 34, 204, 205].
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-1 flex items-center"><i class="fa-solid fa-calendar-days text-indigo-500 mr-1.5"></i> Collaborative Staff Scheduler</h4>
+                    Generates balanced bi-weekly shift matrices by automatically matching institutional labor needs with individual employee shift preference profiles[cite: 72, 83].
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold text-gray-900 mb-3"><i class="fa-solid fa-chart-line text-indigo-500 mr-2"></i>Executive Support & Analytics Dashboard</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                To serve executive operations requirements, RCMIS abstracts relational data out of secondary subsystem databases into a high-level administrative intelligence layer[cite: 7, 79, 84]:
+            </p>
+            <div class="bg-gray-900 text-gray-100 p-5 rounded-xl border border-gray-800 space-y-3 text-sm font-mono">
+                <p class="text-emerald-400 font-bold text-xs uppercase tracking-wider">// High-Fidelity Analytic Modeling Views</p>
+                <p><span class="text-indigo-400">● Channels Analysis:</span> Visualizes comparative percentages of walk-in versus online revenue distributions[cite: 184].</p>
+                <p><span class="text-indigo-400">● Occupancy Optimization:</span> Tracks dynamic daily utilization indicators to predict high-traffic calendar blocks[cite: 189].</p>
+                <p><span class="text-indigo-400">● Financial Ledger Aggregation:</span> Pulls real-time transactional aggregates calculating current monthly revenues, daily income flows, and pending balances[cite: 133, 186, 188].</p>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 class="text-gray-900 font-bold mb-3 flex items-center text-sm uppercase tracking-wide">
+                <i class="fa-solid fa-lock text-indigo-600 mr-2"></i> Non-Functional System Compliance
+            </h3>
+            <p class="text-xs md:text-sm leading-relaxed text-gray-600">
+                The technical proposal enforces localized data confidentiality standards[cite: 104, 118]. Sensitive financial payment tracking fields are designated for field-level encryption, while role-based permission boundaries restrict schedule manipulation and database updates solely to authorized administrative groups[cite: 85, 105, 117].
+            </p>
+        </section>
+
+    </article>
+
+    <footer class="bg-gray-100 text-center py-8 border-t border-gray-200 text-xs text-gray-400">
+        &copy; 2026 Academic Systems Analysis & Design Portfolio Submission.
+    </footer>
+
+</body>
+</html>
